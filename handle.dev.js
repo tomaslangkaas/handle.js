@@ -93,6 +93,13 @@ var handle = (function(win, doc){
 				elm['onclick'] = elm['ontouchstart'] = null;
 			}
 		},
+		'on': function(id, type, fn){
+			var elm = doc['getElementById'](id) || {};
+			elm['on' + type] = fn;
+			return function(){
+				elm['on' + type] = null;
+			}
+		},
 		'newState': function(){
 			stateHandlers = {};
 		}
