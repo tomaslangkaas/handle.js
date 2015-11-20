@@ -87,7 +87,7 @@ var handle = (function(win, doc){
 			elm['onclick'] = fn;
 			elm['ontouchstart'] = function(e){
 				e['preventDefault']();
-				fn();
+				fn(e);
 			};
 			return function(){
 				elm['onclick'] = elm['ontouchstart'] = null;
