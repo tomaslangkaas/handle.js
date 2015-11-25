@@ -13,4 +13,15 @@ for text inputs(input type text/password, textarea): no handling of keys unless 
 
 else: special keys captured on keydown, chars on keypress, shiftKey modifier ignored on keypress
 
+## Key combinations
+
+[printable ascii]
+a-z [+ ctrl][ + alt]
+[specialKey] [+ ctrl][ + alt][+ shift]
+
+## Limitations
+
+- Ignores key events from text inputs (textarea, input[type="text"], input[type="password"]), attach custom handlers to handle key events from any of these
+- Limited to one handler per event type per element (global, state or dom element)
+
 
