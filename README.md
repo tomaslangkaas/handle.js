@@ -20,6 +20,13 @@ else: special keys captured on keydown, chars on keypress, shiftKey modifier ign
 a-z [+ ctrl][ + alt]
 [specialKey] [+ ctrl][ + alt][+ shift]
 ```
+
+For key events triggered by single characters (without any modifiers), the listener is triggered by a keypress event. Character events are not bound to specific keys (varies across keyboard layouts). For these, case matters (distinguishes between `a` and `A`).
+
+For key events triggered by single characters with a modifier (alt or ctrl), these can only be consistently captured by keydown events, which limits these to characters with known keycodes (a-z). For these, case does not matter, and punctuation characters cannot be consistently captured across browsers and keyboard layouts.
+
+For key events triggered by special keys, these can be consistently triggered by keydown with any combination of modifiers (ctr, alt, shift). There is a limited subset of special keys that are consistent across browsers.
+
 ## Limitations
 
 - Ignores key events from text inputs (textarea, input[type="text"], input[type="password"]), attach custom handlers to handle key events from any of these
