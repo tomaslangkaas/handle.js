@@ -15,10 +15,11 @@ else: special keys captured on keydown, chars on keypress, shiftKey modifier ign
 
 ## Key combinations
 
+```
 [printable ascii]
 a-z [+ ctrl][ + alt]
 [specialKey] [+ ctrl][ + alt][+ shift]
-
+```
 ## Limitations
 
 - Ignores key events from text inputs (textarea, input[type="text"], input[type="password"]), attach custom handlers to handle key events from any of these
