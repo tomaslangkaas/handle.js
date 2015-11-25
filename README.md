@@ -27,6 +27,9 @@ For key events triggered by single characters with a modifier (alt or ctrl), the
 
 For key events triggered by special keys, these can be consistently triggered by keydown with any combination of modifiers (ctr, alt, shift). There is a limited subset of special keys that are consistent across browsers.
 
+## Consistent cross-browser handling of key events ...
+... is tricky. There are a few pages documenting quirks and limitations across browsers [here](http://unixpapa.com/js/key.html) and [here](http://www.quirksmode.org/js/keys.html). [This link](http://stackoverflow.com/questions/3036243/cancel-the-keydown-in-html) addresses cross-browser issues in preventing default key events in text inputs.
+
 ## Limitations
 
 - Ignores key events from text inputs (textarea, input[type="text"], input[type="password"]), attach custom handlers to handle key events from any of these
